@@ -5549,13 +5549,6 @@ end
 		until game.Players.LocalPlayer.Team ~= nil
 	end
 
-	
-		local Data = game:GetService("HttpService"):JSONEncode(Embed)
-		local Head = {["content-type"] = "application/json"}
-		Send = http_request or request or HttpPost or syn.request
-		local sendhook = {Url = LinkHook, Body = Data, Method = "POST", Headers = Head}
-		Send(sendhook)
-	end
 	if _G.Setting_table.HookDelay then
 		 _G.Setting_table.HookDelay =  _G.Setting_table.HookDelay
 	else
@@ -5567,4 +5560,3 @@ end
 		end)
 	end
 end)
---BY DEP YUME.
