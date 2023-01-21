@@ -5549,6 +5549,54 @@ end
 		until game.Players.LocalPlayer.Team ~= nil
 	end
 
+	function SendHook(LinkHook)
+		local Embed = {
+			 ["username"] = "Dep Hub Webhook",
+			 ["avatar_url"] = "https://discord.com/api/webhooks/1066280968098414662/urP_3VppwUguLI_xi3tNEdAoqLbQSaejxXinBtL4FiPXCTPOdYdbaJLIbJcAz3C2d1Mp",
+			["embeds"] = {
+				{
+					["title"] = "**Blox Fruit // Dep Hub Webhook**",
+					["color"] = tonumber(0xff0000),
+					["type"] = "rich",
+					["fields"] =  {
+						{
+							["name"] = "Username",
+							["value"] = game.Players.LocalPlayer.Name,
+							["inline"] = true
+						},
+						{
+							["name"] = "Level",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Level.Value,
+						},
+						{
+							["name"] = "Beli",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Beli.Value,
+						},
+						{
+							["name"] = "Fragment",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Fragments.Value,
+						},
+						{
+							["name"] = "Fruit",
+							["value"] = game:GetService("Players").LocalPlayer.Data.DevilFruit.Value,
+						},
+						{
+							["name"] = "Race",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Race.Value,
+						}
+					},
+					["footer"] = {
+						["text"] = os.date("%A".." // ".."%d".." ".."%B".." ".."%Y".." // ".."%X").."\nCFrame Hub : https://discord.gg/VERTxGCaFp"
+					}
+				}
+			},
+		}
+		local Data = game:GetService("HttpService"):JSONEncode(Embed)
+		local Head = {["content-type"] = "application/json"}
+		Send = http_request or request or HttpPost or syn.request
+		local sendhook = {Url = LinkHook, Body = Data, Method = "POST", Headers = Head}
+		Send(sendhook)
+	end
 	if _G.Setting_table.HookDelay then
 		 _G.Setting_table.HookDelay =  _G.Setting_table.HookDelay
 	else
