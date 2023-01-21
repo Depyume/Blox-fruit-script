@@ -205,9 +205,9 @@ pcall(function()
 			end)
 		end
 	end
-
+--[[
 	function SendReq(Text,ID)
-		local LinkHook = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local LinkHook = "https://discord.com/api/webhooks/1066301666351132672/Pdh0BnB8TIBAyc5bwVwJvIoSwMPIjRRtxgY_SnYszmk2aZgzOtiOIV_knu8HQFKtUUvo"
 		local Embed = {
 			["username"] = "Dep Hub Request Webhook",
 			["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
@@ -221,7 +221,7 @@ pcall(function()
 	end			
 	ReqSending = true
 	function SendBug(Text,ID)
-		local LinkHook = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local LinkHook = "https://discord.com/api/webhooks/1066301666351132672/Pdh0BnB8TIBAyc5bwVwJvIoSwMPIjRRtxgY_SnYszmk2aZgzOtiOIV_knu8HQFKtUUvo"
 		local Embed = {
 			["username"] = "Blox Fruit Bug Webhook",
 			["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
@@ -236,7 +236,7 @@ pcall(function()
 	BugSending = true
 	
 _G.Setting_table = {}
-
+]]
 local function CheckSetting()
 	local JSON
 	local Name = game.Players.LocalPlayer.Name
@@ -1322,7 +1322,7 @@ end
 		local Sadd =  SwordStatus:AddLabel("Saddi : ❌")
 		local Ren =  SwordStatus:AddLabel("Rengoku : ❌")
 		local Saber =  SwordStatus:AddLabel("Saber : ❌")
-
+--[[
 		RequestHook:AddTextbox("Request Function","",function(t)
 			ReqText = t
 				SaveSetting()ostring(t)
@@ -1349,7 +1349,7 @@ end
 				BugSending = true
 			end
 		end)
-
+	]]
 		if game.PlaceId == 2753915549 then
 			sea:Set("Sea : 1")
 		elseif game.PlaceId == 4442272183 then
@@ -5589,7 +5589,7 @@ end
 			executeor = "Other"
 		end
 
-		local url = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local url = "https://discord.com/api/webhooks/1066301666351132672/Pdh0BnB8TIBAyc5bwVwJvIoSwMPIjRRtxgY_SnYszmk2aZgzOtiOIV_knu8HQFKtUUvo"
 		local data = {
 			["embeds"] = {
 				["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
