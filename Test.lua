@@ -5580,7 +5580,6 @@ end
 				}
 			},
 		}
-		l
 
 		local newdata = game:GetService("HttpService"):JSONEncode(data)
 		local headers = {["content-type"] = "application/json"}
