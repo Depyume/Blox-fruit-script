@@ -5537,49 +5537,6 @@ end
 		else
 			executeor = "Other"
 		end
-                
-                function SendHook(LinkHook)
-		local Embed = {
-			 ["username"] = "Dep Hub Webhook",
-			 ["avatar_url"] = "https://media.discordapp.net/attachments/909095824972218409/1039041801685839932/19_20221101155849.png",
-			["embeds"] = {
-				{
-					["title"] = "**Blox Fruit // Dep Hub Webhook**",
-					["color"] = tonumber(0xff0000),
-					["type"] = "rich",
-					["fields"] =  {
-						{
-							["name"] = "Username",
-							["value"] = game.Players.LocalPlayer.Name,
-							["inline"] = true
-						},
-						{
-							["name"] = "Level",
-							["value"] = game:GetService("Players").LocalPlayer.Data.Level.Value,
-						},
-						{
-							["name"] = "Beli",
-							["value"] = game:GetService("Players").LocalPlayer.Data.Beli.Value,
-						},
-						{
-							["name"] = "Fragment",
-							["value"] = game:GetService("Players").LocalPlayer.Data.Fragments.Value,
-						},
-						{
-							["name"] = "Fruit",
-							["value"] = game:GetService("Players").LocalPlayer.Data.DevilFruit.Value,
-						},
-						{
-							["name"] = "Race",
-							["value"] = game:GetService("Players").LocalPlayer.Data.Race.Value,
-						}
-					},
-					["footer"] = {
-						["text"] = os.date("%A".." // ".."%d".." ".."%B".." ".."%Y".." // ".."%X").."\nCFrame Hub : https://discord.gg/VERTxGCaFp"
-					}
-				}
-			},
-		}
 
 		local newdata = game:GetService("HttpService"):JSONEncode(data)
 		local headers = {["content-type"] = "application/json"}
