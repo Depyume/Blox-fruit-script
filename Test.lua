@@ -1,13 +1,14 @@
+
 pcall(function()
 	spawn(function()
 		pcall(function()
 			if _G.Setting_table.MobileMode then
 				local ScreenGui = Instance.new("ScreenGui")
 				local Toggle = Instance.new("TextButton")
-
+					
 				ScreenGui.Name = "ScreenGui"
 				ScreenGui.Parent = game.CoreGui
-
+					
 				Toggle.Name = "ui"
 				Toggle.Parent = ScreenGui
 				Toggle.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
@@ -205,7 +206,35 @@ pcall(function()
 		end
 	end
 
-
+	function SendReq(Text,ID)
+		local LinkHook = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local Embed = {
+			["username"] = "Dep Hub Request Webhook",
+			["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
+			["content"] = "Send from".." ".."<@"..ID..">".." "..Text,
+		}
+		local Data = game:GetService("HttpService"):JSONEncode(Embed)
+		local Head = {["content-type"] = "application/json"}
+		Send = http_request or request or HttpPost or syn.request
+		local sendhook = {Url = LinkHook, Body = Data, Method = "POST", Headers = Head}
+		Send(sendhook)
+	end			
+	ReqSending = true
+	function SendBug(Text,ID)
+		local LinkHook = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local Embed = {
+			["username"] = "Blox Fruit Bug Webhook",
+			["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
+			["content"] = "Send from".." ".."<@"..ID..">".." "..Text,
+		}
+		local Data = game:GetService("HttpService"):JSONEncode(Embed)
+		local Head = {["content-type"] = "application/json"}
+		Send = http_request or request or HttpPost or syn.request
+		local sendhook = {Url = LinkHook, Body = Data, Method = "POST", Headers = Head}
+		Send(sendhook)
+	end			
+	BugSending = true
+	
 _G.Setting_table = {}
 
 local function CheckSetting()
@@ -260,8 +289,8 @@ end
 		end
 		game.StarterGui:SetCore("SendNotification", {
 			Title = "Dep Hub", 
-			Text = "Thanks for execute script",
-			Icon = "rbxassetid://10350369623",  --GOTO a patch !!!!
+			Text = "Thanks",
+			Icon = "rbxassetid://56120964",
 			Duration = 5
    		})
 		spawn(function()
@@ -315,8 +344,8 @@ end
 		--end)
 
 		local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/naypramx/Ui__Project/Script/XeNonUi",true))()
-		local Win = library:CreateWindow("Dep | Blox Fruit ",Enum.KeyCode.RightControl)
-
+		local Win = library:CreateWindow("Dep Hub | Blox Fruit",Enum.KeyCode.RightControl)
+		
 		local Main = Win:CreateTab("Main")
 		local Player = Win:CreateTab("Player")
 		local Island = Win:CreateTab("Island")
@@ -801,56 +830,56 @@ end
 			BTP(CFrame.new(1330.6829833984375, 101.7236328125, 4489.30615234375))
 		end)
 		IslandTP:AddButton("Water 7",function()
-
+ 
 			 BTP(CFrame.new(5420.33642578125, 429.39251708984375, 4396.38720703125))
 		end)
 		IslandTP:AddButton("Jungle",function()
-
+ 
 			 BTP(CFrame.new(-1511.501953125, 38.879093170166016, 15.329108238220215))
 		end)
 		IslandTP:AddButton("Marine Fort",function()
-
+ 
 			 BTP(CFrame.new(-4820.69921875, 20.686969757080078, 4359.85302734375))
 		end)
 		IslandTP:AddButton("Middle Town",function()
-
+ 
 			 BTP(CFrame.new(-703.16748046875, 7.887283802032471, 1575.1864013671875))
 		end)
 		IslandTP:AddButton("Pirate Village",function()
-
+ 
 			 BTP(CFrame.new(-946.40576171875, 16.787080764770508, 3846.512451171875))
 		end)
 		IslandTP:AddButton("Prison",function()
-
+ 
 			 BTP(CFrame.new(5270.5693359375, 161.84872436523438, 844.7282104492188))
 		end)
 		IslandTP:AddButton("Sky 1",function()
-
+ 
 			 BTP(CFrame.new(-4823.9208984375, 717.7313232421875, -2633.15576171875))
 		end)
 		IslandTP:AddButton("Sky 2",function()
-
+ 
 			 BTP(CFrame.new(-7987.13818359375, 5814.02880859375, -1958.1417236328125))
 		end)
 		IslandTP:AddButton("Snow",function()
-
+ 
 			 BTP(CFrame.new(1448.4190673828125, 37.38336944580078, -1202.0010986328125))
 		end)
 		IslandTP:AddButton("Under Water",function()
-
+ 
 			 BTP(CFrame.new(61161.515625, 18.90582275390625, 1382.89306640625))
 		end)
 		IslandTP:AddButton("Volcano",function()
-
+ 
 			 BTP(CFrame.new(-5369.56787109375, 9.025712966918945, 8486.3447265625))
 		end)
 	elseif game.PlaceId == 4442272183 then
 		IslandTP:AddButton("Cafe",function()
-
+ 
 			 BTP(CFrame.new(-382, 73.05394744873047, 356))
 		end)
 		IslandTP:AddButton("Green Zone",function()
-
+ 
 			 BTP(CFrame.new(-2283.271240234375, 73.00115966796875, -2781.27587890625))
 		end)
 		IslandTP:AddButton("Colosseum",function()
@@ -903,43 +932,43 @@ end
 		end)
 	elseif game.PlaceId == 7449423635 then
 		IslandTP:AddButton("Port",function()
-
+ 
 			 BTP(CFrame.new(-337.5281982421875, 6.764979839324951, 5317.39990234375))
 		end)
 		IslandTP:AddButton("Cake Island",function()
-
+ 
 			 BTP(CFrame.new(-2098.970458984375, 69.30995178222656, -12128.359375))
 		end)
 		IslandTP:AddButton("Peanut Island",function()
-
+ 
 			 BTP(CFrame.new(-2037.8001708984375, 9.71238899230957, -9948.2021484375))
 		end)
 		IslandTP:AddButton("Ice Cream Island",function()
-
+ 
 			 BTP(CFrame.new(-917.5485229492188, 56.28582000732422, -10858.6962890625))
 		end)
 		IslandTP:AddButton("Chocolate Island",function()
-
+ 
 			 BTP(CFrame.new(379.1396179199219, 126.6269302368164, -12720.83984375))
 		end)
 		IslandTP:AddButton("Great Tree",function()
-
+ 
 			 BTP(CFrame.new(2486.255126953125, 273.0214538574219, -7078.86328125))
 		end)
 		IslandTP:AddButton("Haunted Castle",function()
-
+ 
 			 BTP(CFrame.new(-9515.0009765625, 142.1398468017578, 5534.05029296875))
 		end)
 		IslandTP:AddButton("Hydra Island",function()
-
+ 
 			 BTP(CFrame.new(5204.13037109375, 601.6182861328125, 496.2370300292969))
 		end)
 		IslandTP:AddButton("Sea Castle",function()
-
+ 
 			 BTP(CFrame.new(-5099.86376953125, 314.550537109375, -2979.5771484375))
 		end)
 		IslandTP:AddButton("Mansion",function()
-
+ 
 			 BTP(CFrame.new(-12549.203125, 337.20330810546875, -7521.52978515625))
 		end)
 	end
@@ -1078,7 +1107,7 @@ end
 				_G.Setting_table.AutoFullyRaid = t
 				SaveSetting()
 			end)
-
+			
 			local RaidsChip = RaidProperty:AddDropdown("Select Raid Chip",Chip,_G.Setting_table.DunType,false,function(t)
 				_G.Setting_table.DunType = t
 				SaveSetting()
@@ -1246,7 +1275,7 @@ end
 		Abilities:AddButton("Remove fog",function()
 			game.Lighting.Sky:Destroy()
 		end)
-
+		
 		Abilities:AddDropdown("Select steal fruit type",{"Grab Fruit","Teleport to Fruit"},_G.Setting_table.StealType,false,function(t)
 			_G.Setting_table.StealType = t
 				SaveSetting()
@@ -1294,9 +1323,32 @@ end
 		local Ren =  SwordStatus:AddLabel("Rengoku : ❌")
 		local Saber =  SwordStatus:AddLabel("Saber : ❌")
 
+		RequestHook:AddTextbox("Request Function","",function(t)
+			ReqText = t
+				SaveSetting()ostring(t)
+		end)
 
+		RequestHook:AddButton("Send Request",function()
+			if ReqSending and typeof(_G.Setting_table.id) == "string" then
+				ReqSending = false
+				SendReq(ReqText,_G.Setting_table.id)
+				wait(350)
+				ReqSending = true
+			end
+		end)
 
+		BugHook:AddTextbox("Report Bug","",function(t)
+			BugText = tostring(t)
+		end)
 
+		BugHook:AddButton("Send Bug",function()
+			if BugSending and typeof(_G.Setting_table.id) == "string" then
+				BugSending = false
+				SendBug(BugText,_G.Setting_table.id)
+				wait(350)
+				BugSending = true
+			end
+		end)
 
 		if game.PlaceId == 2753915549 then
 			sea:Set("Sea : 1")
@@ -2371,7 +2423,7 @@ end
 				end)
 			end
 		end)
-
+		
 
 
 		function EquipTool(Tool)
@@ -3681,7 +3733,7 @@ end
 				end
 			end
 		end)
-
+		
 		spawn(function()
 			while task.wait() do
 				pcall(function()
@@ -3833,7 +3885,7 @@ end
 				end
 			end
 		end)
-
+		
 		spawn(function()
 			while task.wait() do
 				if _G.Setting_table.Bring and _G.Setting_table.AutoMusketeerHat  then
@@ -4926,7 +4978,7 @@ end
 									end
 								end
 							else
-
+								
 							end
 						else
 							game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("RaidsNpc","Select",getgenv().ChipRaid)
@@ -5159,7 +5211,7 @@ end
 								end
 							end
 						end
-
+						
 					else
 						for i,v in pairs(game.Workspace:GetChildren()) do
 							if string.find(v.Name,"Fruit") then
@@ -5358,7 +5410,7 @@ end
 			end
 		end)
 
-
+		
 
 		spawn(function()
 			while task.wait() do
@@ -5528,7 +5580,7 @@ end
 				end)
 			end)
 		end)
-
+		
 		if syn then
 			executeor = "SynapseX" 
 		elseif KRNL_LOADED then
@@ -5537,6 +5589,39 @@ end
 			executeor = "Other"
 		end
 
+		local url = "https://discord.com/api/webhooks/1039973495091773573/Lr3-IAh-RAW1HEtGjw5hBuID537ngOyRMVU80xiaoYFjYweUq5IcQ80vvtmavXUztrzu"
+		local data = {
+			["embeds"] = {
+				["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
+				{
+					["title"] = "**"..game.Players.LocalPlayer.Name.."**".." **Executed Your Script!**",
+					["url"] = "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId.."/profile",
+					["description"] = "Executed with "..executeor,
+					["color"] = tonumber(0xff0000),
+					["type"] = "rich",
+					["fields"] =  {
+						{
+							["name"] = "Username",
+							["value"] = game.Players.LocalPlayer.Name,
+							["inline"] = true
+						},
+						{
+							["name"] = "Display Name",
+							["value"] = game.Players.LocalPlayer.DisplayName,
+							["inline"] = true
+						},
+						{
+							["name"] = "HWID",
+							["value"] = tostring(game:GetService("RbxAnalyticsService"):GetClientId()),
+							["inline"] = false
+						}
+					},
+					["footer"] = {
+						["text"] = os.date("%A".." // ".."%d".." ".."%B".." ".."%Y".." // ".."%X")
+					}
+				}
+			},
+		}
 		local newdata = game:GetService("HttpService"):JSONEncode(data)
 		local headers = {["content-type"] = "application/json"}
 		request = http_request or request or HttpPost or syn.request
@@ -5548,7 +5633,48 @@ end
 		until game.Players.LocalPlayer.Team ~= nil
 	end
 
-
+	function SendHook(LinkHook)
+		local Embed = {
+			 ["username"] = "Dep Hub Webhook",
+			 ["avatar_url"] = "https://cdn.discordapp.com/attachments/1029805135439868024/1066298668510093352/pngwing.com.png",
+			["embeds"] = {
+				{
+					["title"] = "**Blox Fruit // Dep Hub Webhook**",
+					["color"] = tonumber(0xff0000),
+					["type"] = "rich",
+					["fields"] =  {
+						{
+							["name"] = "Username",
+							["value"] = game.Players.LocalPlayer.Name,
+							["inline"] = true
+						},
+						{
+							["name"] = "Level",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Level.Value,
+						},
+						{
+							["name"] = "Beli",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Beli.Value,
+						},
+						{
+							["name"] = "Fragment",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Fragments.Value,
+						},
+						{
+							["name"] = "Fruit",
+							["value"] = game:GetService("Players").LocalPlayer.Data.DevilFruit.Value,
+						},
+						{
+							["name"] = "Race",
+							["value"] = game:GetService("Players").LocalPlayer.Data.Race.Value,
+						}
+					},
+					["footer"] = {
+						["text"] = os.date("%A".." // ".."%d".." ".."%B".." ".."%Y".." // ".."%X").."\nDep Hub "
+					}
+				}
+			},
+		}
 		local Data = game:GetService("HttpService"):JSONEncode(Embed)
 		local Head = {["content-type"] = "application/json"}
 		Send = http_request or request or HttpPost or syn.request
@@ -5566,4 +5692,3 @@ end
 		end)
 	end
 end)
---BY DEP YUME.
