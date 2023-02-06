@@ -49,7 +49,7 @@ pcall(function()
 	end
 
 	print("Game is loaded")
-	if getgenv().Execute and game:GetService("HttpService"):GenerateGUID(false) ~= '988B980B-BFDA-4862-89CB-DDD48CFDD42C' and game:GetService("RbxAnalyticsService"):GetClientId() ~= "69ECEE1D-EAED-4F27-B17B-DF33B677F80B" and game.Players.LocalPlayer.Name ~= "pete9973" and game.Players.LocalPlayer.Name ~= "CFrame3310" then
+	if getgenv().Execute and game:GetService("HttpService"):GenerateGUID(false) ~= '988B980B-BFDA-4862-89CB-DDD48CFDD42C' and game:GetService("RbxAnalyticsService"):GetClientId() ~= "69ECEE1D-EAED-4F27-B17B-DF33B677F80B" and game.Players.LocalPlayer.Name ~= "NunursMegaPower" then
 		print("Double Execute")
 		game.Players.LocalPlayer:Kick("\n Don't execute 2 times")
 	else
