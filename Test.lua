@@ -1274,6 +1274,11 @@ end
 		end)
 		Abilities:AddButton("Remove fog",function()
 			game.Lighting.Sky:Destroy()
+			game.Lighting.FogEnd = 100000
+			game.Lighting.FogStart = 0
+			game.Lighting.ClockTime = 14
+			game.Lighting.Brightness = 2
+			game.Lighting.GlobalShadows = false
 		end)
 		
 		Abilities:AddDropdown("Select steal fruit type",{"Grab Fruit","Teleport to Fruit"},_G.Setting_table.StealType,false,function(t)
